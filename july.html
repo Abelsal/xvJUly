@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación XV de Julieth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { box-sizing: border-box; }
+
+      :root {
+        --rose-1: #f7eff2;
+        --rose-2: #e9d6dd;
+        --rose-3: #cfa6b2;
+        --rose-4: #aa7d8d;
+        --sage-1: #f4f8f3;
+        --sage-2: #e5eee3;
+        --sage-3: #ccdcca;
+        --sage-4: #9fb59d;
+        --sage-5: #7e987c;
+        --gold: #d2b36d;
+        --ink: #2f2c2d;
+        --muted: #687166;
+        --white: #ffffff;
+        --shadow: 0 24px 60px rgba(62, 74, 62, 0.14);
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 10%, rgba(255,255,255,.65), transparent 16%),
+          radial-gradient(circle at 82% 12%, rgba(224, 238, 223, .72), transparent 14%),
+          linear-gradient(180deg, #f8fbf7 0%, #eef5ec 100%);
+      }
+
+      .page {
+        min-height: 100vh;
+        padding: 24px 12px 34px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .desktop-frame { display: none; }
+      .mobile-frame { display: block; }
+
+      .silk,
+      .silk-bottom {
+        position: absolute;
+        left: 50%;
+        width: min(1000px, 120vw);
+        height: 180px;
+        transform: translateX(-50%);
+        background:
+          radial-gradient(ellipse at 15% 50%, rgba(255,255,255,.75), transparent 28%),
+          radial-gradient(ellipse at 60% 40%, rgba(255,255,255,.45), transparent 22%),
+          linear-gradient(135deg, #dce8da 0%, #c8d8c7 24%, #eef3ea 48%, #c5d5c2 72%, #e6d5dc 100%);
+        opacity: .96;
+        z-index: 0;
+        border-radius: 38% 62% 55% 45% / 42% 38% 62% 58%;
+      }
+
+      .silk { top: -68px; }
+      .silk-bottom { bottom: -72px; transform: translateX(-50%) scaleY(-1); }
+
+      .mobile-card,
+      .desktop-card {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        background: rgba(255,255,255,.78);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(180, 197, 178, .7);
+        border-radius: 36px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .mobile-card {
+        width: min(760px, 100%);
+      }
+
+      .desktop-card {
+        width: min(1180px, 100%);
+      }
+
+      .mobile-card::before,
+      .desktop-card::before {
+        content: '';
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(191, 208, 191, .8);
+        border-radius: 24px;
+        pointer-events: none;
+      }
+
+      .site {
+        padding: 20px 18px 34px;
+        background:
+          radial-gradient(circle at 8% 18%, rgba(210, 230, 212, .34), transparent 14%),
+          radial-gradient(circle at 92% 30%, rgba(191, 217, 193, .28), transparent 13%),
+          radial-gradient(circle at 16% 92%, rgba(232, 215, 221, .22), transparent 14%),
+          linear-gradient(180deg, #fefefe 0%, #f7fbf5 100%);
+        position: relative;
+      }
+
+      .site::before,
+      .site::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .site::before {
+        background:
+          radial-gradient(circle at 4% 22%, rgba(213, 171, 69, .9) 0 1.3px, transparent 2px),
+          radial-gradient(circle at 6% 24%, rgba(213, 171, 69, .6) 0 1px, transparent 1.8px),
+          radial-gradient(circle at 93% 67%, rgba(213, 171, 69, .9) 0 1.3px, transparent 2px),
+          radial-gradient(circle at 95% 69%, rgba(213, 171, 69, .6) 0 1px, transparent 1.8px),
+          radial-gradient(circle at 12% 84%, rgba(213, 171, 69, .7) 0 1.1px, transparent 1.8px);
+        opacity: .55;
+      }
+
+      .site::after {
+        background:
+          linear-gradient(115deg, transparent 0 95%, rgba(197, 212, 196, .55) 95.3% 95.9%, transparent 96%),
+          linear-gradient(25deg, transparent 0 89%, rgba(210, 189, 198, .30) 89.3% 89.8%, transparent 90%),
+          linear-gradient(100deg, transparent 0 98%, rgba(197, 212, 196, .38) 98.2% 98.7%, transparent 99%);
+        opacity: .7;
+      }
+
+      .hero-photo {
+        width: min(290px, 100%);
+        margin: 0 auto;
+        background: #fff;
+        padding: 14px 14px 18px;
+        box-shadow: 0 10px 30px rgba(117, 77, 96, .08);
+      }
+
+      .arch-photo {
+        width: 100%;
+        aspect-ratio: 3 / 4.2;
+        border-radius: 180px 180px 0 0;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.06)),
+          url('julieth.jpeg') center/cover no-repeat,
+          linear-gradient(180deg, #d2dfd0 0%, #8ea78e 100%);
+        position: relative;
+      }
+
+      .hero-title {
+        text-align: center;
+        margin-top: 14px;
+      }
+
+      .eyebrow,
+      .desktop-eyebrow {
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: .28em;
+        color: var(--gold);
+        font-weight: 400;
+      }
+
+      .script-name,
+      .script-heading,
+      .script-final,
+      .desktop-name,
+      .desktop-heading,
+      .desktop-final {
+        font-family: 'Great Vibes', cursive;
+        color: var(--rose-4);
+        font-weight: 400;
+      }
+
+      .script-name {
+        margin: 4px 0 0;
+        font-size: 4rem;
+        line-height: .95;
+        color: #b69a63;
+      }
+
+      .tiny-butterflies {
+        margin-top: 2px;
+        color: #b9cbb8;
+        letter-spacing: 8px;
+        font-size: 18px;
+      }
+
+      .music-wrap,
+      .desktop-music-wrap {
+        text-align: center;
+        margin: 16px 0 6px;
+      }
+
+      .music-btn,
+      .desktop-music-btn,
+      .soft-btn,
+      .submit-btn,
+      .map-btn,
+      .desktop-btn,
+      .desktop-map-btn {
+        border: none;
+        cursor: pointer;
+        font: inherit;
+      }
+
+      .music-btn,
+      .desktop-music-btn,
+      .submit-btn,
+      .map-btn,
+      .desktop-btn,
+      .desktop-map-btn {
+        border-radius: 999px;
+        padding: 12px 20px;
+        background: linear-gradient(180deg, #bcd1bc, #7f9b7f);
+        color: white;
+        box-shadow: 0 10px 22px rgba(127, 155, 127, .22);
+        text-decoration: none;
+      }
+
+      .music-note {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .intro-text {
+        text-align: center;
+        max-width: 300px;
+        margin: 18px auto 22px;
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 14px;
+      }
+
+      .date-block {
+        text-align: center;
+        margin: 8px 0 16px;
+      }
+
+      .date-day {
+        font-size: 4rem;
+        line-height: .9;
+        color: #8d9f87;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+      }
+
+      .date-script {
+        margin-top: -6px;
+        font-size: 3rem;
+      }
+
+      .date-year {
+        font-size: 2.35rem;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--rose-4);
+        line-height: 1;
+        margin-top: -4px;
+      }
+
+      .countdown {
+        background: linear-gradient(180deg, #e8efe6, #dbe8da);
+        margin: 18px -18px 28px;
+        padding: 12px 14px;
+        text-align: center;
+      }
+
+      .countdown h3 {
+        margin: 0 0 6px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: .08em;
+      }
+
+      .timer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        align-items: start;
+        text-align: center;
+      }
+
+      .timer strong {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: 'Cormorant Garamond', serif;
+        line-height: 1;
+      }
+
+      .timer span {
+        display: block;
+        margin-top: 4px;
+        font-size: 10px;
+        letter-spacing: .12em;
+        color: #6f746c;
+      }
+
+      .card-section {
+        text-align: center;
+        padding: 10px 0 26px;
+      }
+
+      .line-icon {
+        font-size: 42px;
+        margin-bottom: 8px;
+        color: #6f886f;
+      }
+
+      .section-name {
+        font-size: 2.2rem;
+        margin: 0 0 2px;
+      }
+
+      .section-sub {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        margin: 2px 0 0;
+        color: #51604f;
+      }
+
+      .section-time {
+        margin-top: 4px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.9rem;
+        color: var(--rose-4);
+      }
+
+      .soft-btn {
+        margin-top: 14px;
+        background: #f3f5f2;
+        color: #333;
+        padding: 10px 18px;
+        border-radius: 999px;
+        box-shadow: 0 6px 14px rgba(0,0,0,.08);
+      }
+
+      .photo-strip {
+        width: 180px;
+        height: 112px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.04)),
+          url('iglesia.jpg') center/cover no-repeat,
+          linear-gradient(180deg, #e1e9de, #bfd0bf);
+        border: 8px solid #fff;
+        margin: 0 auto 18px;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      }
+
+      .desktop-photo-strip {
+        width: min(320px, 100%);
+        height: 180px;
+        margin: 0 auto 20px;
+        border: 10px solid #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.04)),
+          url('iglesia.jpg') center/cover no-repeat,
+          linear-gradient(180deg, #e1e9de, #bfd0bf);
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        position: relative;
+        margin-top: 18px;
+        padding-top: 18px;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: #9eb59d;
+      }
+
+      .stop {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .stop::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #9eb59d;
+        display: block;
+        margin: 0 auto 10px;
+        box-shadow: 0 0 0 6px #fff;
+      }
+
+      .stop .mini-icon {
+        font-size: 26px;
+        margin-bottom: 6px;
+        color: #6f886f;
+      }
+
+      .stop h4 {
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.45rem;
+      }
+
+      .stop p {
+        margin: 0;
+        color: var(--rose-4);
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.35rem;
+      }
+
+      .dress { margin-top: 26px; }
+
+      .gift-note {
+        margin: 18px auto 0;
+        max-width: 300px;
+        line-height: 1.7;
+      }
+
+      .highlight-band,
+      .desktop-band {
+        margin-top: 18px;
+        background: linear-gradient(180deg, #e6efe4, #d5e3d3);
+        padding: 16px;
+        border-radius: 16px;
+        text-align: center;
+        color: #7e987c;
+        letter-spacing: .04em;
+        line-height: 1.7;
+      }
+
+      .rsvp-wrap { padding-top: 28px; }
+
+      .rsvp-icon {
+        font-size: 50px;
+        color: #8aa187;
+      }
+
+      .rsvp-text {
+        font-size: 15px;
+        margin: 14px 0 10px;
+      }
+
+      .rsvp-form {
+        display: grid;
+        gap: 10px;
+        max-width: 300px;
+        margin: 0 auto 16px;
+      }
+
+      input,
+      .desktop-rsvp-form input {
+        width: 100%;
+        border: 1px solid #cddccc;
+        border-radius: 16px;
+        padding: 13px 14px;
+        font: inherit;
+        background: white;
+      }
+
+      input:focus,
+      .desktop-rsvp-form input:focus {
+        outline: none;
+        border-color: #91aa91;
+        box-shadow: 0 0 0 3px rgba(145, 170, 145, .14);
+      }
+
+      .map-btn {
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .info-box,
+      .desktop-info {
+        max-width: 380px;
+        margin: 12px auto 0;
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: linear-gradient(180deg, #f7faf6, #eef5ed);
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .script-final {
+        margin: 18px 0 0;
+        font-size: 3rem;
+      }
+
+      .brand {
+        text-align: center;
+        margin-top: 16px;
+        color: #1b1b1b;
+        font-size: 12px;
+        font-weight: 500;
+        position: relative;
+        z-index: 1;
+      }
+
+      .desktop-hero {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 44px;
+        align-items: center;
+        padding: 42px 46px 28px;
+        position: relative;
+      }
+
+      .desktop-photo-card {
+        background: rgba(255,255,255,.85);
+        padding: 18px;
+        border-radius: 28px;
+        box-shadow: 0 16px 36px rgba(92, 110, 92, .12);
+      }
+
+      .desktop-arch {
+        width: 100%;
+        aspect-ratio: 3 / 4.2;
+        border-radius: 220px 220px 0 0;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.06)),
+          url('julieth.jpeg') center/cover no-repeat,
+          linear-gradient(180deg, #d2dfd0 0%, #8ea78e 100%);
+      }
+
+      .desktop-copy {
+        text-align: left;
+        padding-right: 12px;
+      }
+
+      .desktop-name {
+        margin: 10px 0 6px;
+        font-size: 6rem;
+        line-height: .92;
+        color: #97aa92;
+      }
+
+      .desktop-subtext {
+        max-width: 560px;
+        color: var(--muted);
+        line-height: 1.9;
+        font-size: 16px;
+      }
+
+      .desktop-date {
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+        margin-top: 22px;
+      }
+
+      .desktop-date-day {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 5rem;
+        color: #7e987c;
+        line-height: .9;
+      }
+
+      .desktop-date-month {
+        font-family: 'Great Vibes', cursive;
+        font-size: 3.4rem;
+        color: var(--rose-4);
+      }
+
+      .desktop-date-year {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.6rem;
+        color: #7d8f79;
+      }
+
+      .desktop-grid {
+        display: grid;
+        grid-template-columns: 1.05fr .95fr;
+        gap: 26px;
+        padding: 0 46px 34px;
+      }
+
+      .desktop-panel {
+        background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(243, 248, 241, .92));
+        border: 1px solid rgba(205, 220, 204, .95);
+        border-radius: 24px;
+        padding: 26px;
+        box-shadow: 0 10px 28px rgba(92, 110, 92, .08);
+        min-height: 100%;
+      }
+
+      .desktop-heading {
+        margin: 0 0 16px;
+        font-size: 2.6rem;
+        text-align: center;
+      }
+
+      .desktop-events {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .desktop-event-card {
+        text-align: center;
+        padding: 18px 14px;
+        border-radius: 20px;
+        background: linear-gradient(180deg, #f8fbf7, #eef4ec);
+        border: 1px solid rgba(205, 220, 204, .9);
+      }
+
+      .desktop-event-icon {
+        font-size: 34px;
+        color: #6f886f;
+      }
+
+      .desktop-event-title {
+        margin: 8px 0 4px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 2rem;
+        color: var(--rose-4);
+      }
+
+      .desktop-event-place,
+      .desktop-event-time,
+      .desktop-note {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        color: #556252;
+      }
+
+      .desktop-timeline {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 10px;
+        position: relative;
+        padding-top: 18px;
+      }
+
+      .desktop-timeline::before {
+        content: '';
+        position: absolute;
+        top: 31px;
+        left: 22%;
+        right: 22%;
+        height: 2px;
+        background: #9eb59d;
+      }
+
+      .desktop-stop {
+        text-align: center;
+        padding: 10px 8px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .desktop-stop::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #9eb59d;
+        display: block;
+        margin: 0 auto 10px;
+        box-shadow: 0 0 0 6px #fff;
+      }
+
+      .desktop-stop-icon {
+        font-size: 28px;
+        color: #7d9a7a;
+      }
+
+      .desktop-stop-title {
+        margin: 8px 0 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+      }
+
+      .desktop-stop-time {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.35rem;
+        color: var(--rose-4);
+      }
+
+      .desktop-dress {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .desktop-rsvp-form {
+        display: grid;
+        gap: 10px;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .desktop-btn-row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+
+      .desktop-footer {
+        padding: 0 46px 42px;
+        text-align: center;
+      }
+
+      .desktop-final {
+        font-size: 3.2rem;
+      }
+
+      @media (min-width: 901px) {
+        .page { padding: 34px 24px 42px; }
+        .mobile-frame { display: none; }
+        .desktop-frame { display: block; }
+
+        .desktop-panel .timer {
+          max-width: 420px;
+          margin: 8px auto 0;
+          gap: 14px;
+        }
+
+        .desktop-panel .timer strong {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .mobile-card {
+          border-radius: 28px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page { padding-inline: 8px; }
+        .script-name { font-size: 3.3rem; }
+        .date-day { font-size: 3.2rem; }
+        .date-script { font-size: 2.5rem; }
+        .date-year { font-size: 2rem; }
+        .timeline { row-gap: 22px; }
+        .timeline::before { display: none; }
+        .mobile-card::before,
+        .desktop-card::before { inset: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="silk"></div>
+      <div class="silk-bottom"></div>
+
+      <section class="desktop-frame">
+        <div class="desktop-card">
+          <div class="desktop-hero">
+            <div class="desktop-photo-card">
+              <div class="desktop-arch"></div>
+            </div>
+            <div class="desktop-copy">
+              <p class="desktop-eyebrow">XV AÑOS</p>
+              <h1 class="desktop-name">Julieth</h1>
+              <p class="desktop-subtext">
+                Con la bendición de Dios y de mis padres, me sentiré muy honrada de contar con su presencia en la celebración de mis quince años, en una tarde llena de alegría, gratitud y momentos inolvidables.
+              </p>
+              <div class="desktop-date">
+                <div class="desktop-date-day">10</div>
+                <div class="desktop-date-month">Abril</div>
+                <div class="desktop-date-year">2026</div>
+              </div>
+              <div class="desktop-music-wrap">
+                <button id="desktop-music-toggle" class="desktop-music-btn" type="button">▶ Reproducir</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="desktop-grid">
+            <div class="desktop-panel">
+              <h2 class="desktop-heading">Ceremonia y Recepción</h2>
+              <div class="desktop-events">
+                <div class="desktop-event-card">
+                  <div class="desktop-event-icon">⛪</div>
+                  <div class="desktop-event-title">Misa</div>
+                  <div class="desktop-event-place">Iglesia San Juan Bautista</div>
+                  <div class="desktop-event-time">6:00 PM</div>
+                  <div class="desktop-btn-row">
+                    <a class="desktop-map-btn" href="https://maps.app.goo.gl/ZeqKVKod6eX5HtnLA" target="_blank" rel="noreferrer">Abrir ubicación</a>
+                  </div>
+                </div>
+                <div class="desktop-event-card">
+                  <div class="desktop-event-icon">⌖</div>
+                  <div class="desktop-event-title">Recepción</div>
+                  <div class="desktop-event-place">Jardín de eventos JAAVZ</div>
+                  <div class="desktop-event-time">8:00 PM</div>
+                  <div class="desktop-btn-row">
+                    <a class="desktop-map-btn" href="https://maps.app.goo.gl/UDD7xsd6f9i31VNo9" target="_blank" rel="noreferrer">Abrir ubicación</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="desktop-panel">
+              <h2 class="desktop-heading">Cuenta regresiva</h2>
+              <div class="timer">
+                <div><strong id="desktop-days">00</strong><span>DÍAS</span></div>
+                <div><strong id="desktop-hours">00</strong><span>HORAS</span></div>
+                <div><strong id="desktop-minutes">00</strong><span>MINUTOS</span></div>
+                <div><strong id="desktop-seconds">00</strong><span>SEGUNDOS</span></div>
+              </div>
+            </div>
+
+            <div class="desktop-panel">
+              <h2 class="desktop-heading">Itinerario</h2>
+              <div class="desktop-photo-strip"></div>
+              <div class="desktop-timeline">
+                <div class="desktop-stop">
+                  <div class="desktop-stop-icon">⛪</div>
+                  <div class="desktop-stop-title">Parroquia</div>
+                  <div class="desktop-stop-time">6:00 PM</div>
+                </div>
+                <div class="desktop-stop">
+                  <div class="desktop-stop-icon">⌖</div>
+                  <div class="desktop-stop-title">Salón</div>
+                  <div class="desktop-stop-time">8:00 PM</div>
+                </div>
+              </div>
+              <div class="desktop-dress">
+                <h2 class="desktop-heading">Dress code</h2>
+                <div class="desktop-note">Formal</div>
+              </div>
+              <div class="desktop-band">Mis padres: Noe Abrajan Sanches y Rocio Zarco Abarca<br />Mis padrinos: Francisco Aguilar Valverde y Diana Zarco Ramírez</div>
+            </div>
+
+            <div class="desktop-panel">
+              <h2 class="desktop-heading">Confirma asistencia</h2>
+              <form id="desktop-rsvp-form" class="desktop-rsvp-form">
+                <input id="desktop-guest-name" type="text" placeholder="Tu nombre" required />
+                <input id="desktop-guest-count" type="number" min="1" max="10" placeholder="Número de invitados" required />
+                <button class="desktop-btn" type="submit">Confirmar asistencia</button>
+              </form>
+              <div id="desktop-rsvp-message" class="desktop-info">Escribe tu nombre y el número de invitados y se abrirá un mensaje de WhatsApp listo para enviar.</div>
+            </div>
+          </div>
+
+          <div class="desktop-footer">
+            <div class="desktop-final">Te Esperamos</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="mobile-frame">
+        <section class="mobile-card">
+          <div class="site">
+            <div class="hero-photo">
+              <div class="arch-photo"></div>
+            </div>
+
+            <div class="hero-title">
+              <p class="eyebrow">XV AÑOS</p>
+              <h1 class="script-name">Julieth</h1>
+              <div class="tiny-butterflies">❦ ❦ ❦</div>
+            </div>
+
+            <div class="music-wrap">
+              <button id="music-toggle" class="music-btn" type="button">▶ Reproducir música</button>
+            </div>
+
+            <p class="intro-text">
+              Con la bendición de Dios y de mis padres, me sentiré muy honrada de contar con su presencia en la celebración de mis quince años, en una tarde llena de alegría, gratitud y momentos inolvidables.
+            </p>
+
+            <div class="date-block">
+              <div class="date-day">10</div>
+              <div class="script-heading date-script">Abril</div>
+              <div class="date-year">2026</div>
+            </div>
+
+            <section class="countdown">
+              <h3>FALTAN:</h3>
+              <div class="timer">
+                <div><strong id="days">00</strong><span>DÍAS</span></div>
+                <div><strong id="hours">00</strong><span>HORAS</span></div>
+                <div><strong id="minutes">00</strong><span>MINUTOS</span></div>
+                <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
+              </div>
+            </section>
+
+            <section class="card-section">
+              <div class="line-icon">⛪</div>
+              <h2 class="script-heading section-name">Misa</h2>
+              <p class="section-sub">Iglesia San Juan Bautista</p>
+              <div class="section-time">6:00 PM</div>
+              <a class="map-btn" href="https://maps.app.goo.gl/ZeqKVKod6eX5HtnLA" target="_blank" rel="noreferrer">Abrir ubicación</a>
+            </section>
+
+            <section class="card-section">
+              <div class="line-icon">⌖</div>
+              <h2 class="script-heading section-name">Recepción</h2>
+              <p class="section-sub">Jardín de eventos JAAVZ</p>
+              <div class="section-time">8:00 PM</div>
+              <a class="map-btn" href="https://maps.app.goo.gl/UDD7xsd6f9i31VNo9" target="_blank" rel="noreferrer">Abrir ubicación</a>
+            </section>
+
+            <div class="photo-strip"></div>
+
+            <section class="card-section">
+              <h2 class="script-heading section-name">Itinerario</h2>
+              <div class="timeline">
+                <div class="stop">
+                  <div class="mini-icon">⛪</div>
+                  <h4>Parroquia</h4>
+                  <p>6:00 PM</p>
+                </div>
+                <div class="stop">
+                  <div class="mini-icon">⌖</div>
+                  <h4>Salón</h4>
+                  <p>8:00 PM</p>
+                </div>
+              </div>
+
+              <div class="dress">
+                <h2 class="script-heading section-name">Dress code</h2>
+                <div class="line-icon">♢</div>
+                <p class="section-sub" style="font-size:1.5rem;">Formal</p>
+              </div>
+
+              <div class="gift-note">
+                Si deseas regalarme un detalle o un sobre, será bien recibido. Muchas gracias.
+              </div>
+
+              <div class="highlight-band">Mis padres: Noe Abrajan Sanches y Rocio Zarco Abarca<br />Mis padrinos: Francisco Aguilar Valverde y Diana Zarco Ramírez</div>
+            </section>
+
+            <section class="card-section rsvp-wrap">
+              <h2 class="script-heading section-name">Confirma asistencia</h2>
+              <div class="rsvp-icon">◉</div>
+              <p class="rsvp-text">Por favor confirma tu asistencia</p>
+
+              <form id="rsvp-form" class="rsvp-form">
+                <input id="guest-name" type="text" placeholder="Tu nombre" required />
+                <input id="guest-count" type="number" min="1" max="10" placeholder="Número de invitados" required />
+                <button class="submit-btn" type="submit">Confirmar asistencia</button>
+              </form>
+
+              <div id="rsvp-message" class="info-box">Escribe tu nombre y el número de invitados y se abrirá un mensaje de WhatsApp listo para enviar.</div>
+
+              <p class="script-final">Te Esperamos</p>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <div class="brand"> Abel Salazar</div>
+    </main>
+
+    <script>
+      const WHATSAPP_NUMBER = '527531591862';
+
+      const eventDateMexico = {
+        year: 2026,
+        month: 4,
+        day: 10,
+        hour: 18,
+        minute: 0,
+        second: 0
+      };
+
+      const invitationAudio = new Audio('musica.mp3');
+      invitationAudio.loop = true;
+      invitationAudio.preload = 'auto';
+
+      function getMexicoCityNowParts() {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Mexico_City',
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        });
+
+        const parts = Object.fromEntries(
+          formatter
+            .formatToParts(new Date())
+            .filter(part => part.type !== 'literal')
+            .map(part => [part.type, part.value])
+        );
+
+        return {
+          year: Number(parts.year),
+          month: Number(parts.month),
+          day: Number(parts.day),
+          hour: Number(parts.hour),
+          minute: Number(parts.minute),
+          second: Number(parts.second)
+        };
+      }
+
+      function secondsUntilEventInMexicoCity() {
+        const now = getMexicoCityNowParts();
+
+        const nowUtc = Date.UTC(
+          now.year,
+          now.month - 1,
+          now.day,
+          now.hour,
+          now.minute,
+          now.second
+        );
+
+        const eventUtc = Date.UTC(
+          eventDateMexico.year,
+          eventDateMexico.month - 1,
+          eventDateMexico.day,
+          eventDateMexico.hour,
+          eventDateMexico.minute,
+          eventDateMexico.second
+        );
+
+        return Math.floor((eventUtc - nowUtc) / 1000);
+      }
+
+      function updateCountdown() {
+        const diffSeconds = secondsUntilEventInMexicoCity();
+
+        let days = 0;
+        let hours = 0;
+        let minutes = 0;
+        let seconds = 0;
+
+        if (diffSeconds > 0) {
+          days = Math.floor(diffSeconds / 86400);
+          hours = Math.floor((diffSeconds % 86400) / 3600);
+          minutes = Math.floor((diffSeconds % 3600) / 60);
+          seconds = diffSeconds % 60;
+        }
+
+        [
+          ['days', days],
+          ['hours', hours],
+          ['minutes', minutes],
+          ['seconds', seconds],
+          ['desktop-days', days],
+          ['desktop-hours', hours],
+          ['desktop-minutes', minutes],
+          ['desktop-seconds', seconds]
+        ].forEach(([id, value]) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = String(value).padStart(2, '0');
+        });
+      }
+
+      function updateMusicButtons(isPlaying) {
+        document.querySelectorAll('#music-toggle, #desktop-music-toggle').forEach((button) => {
+          if (button) {
+            button.textContent = isPlaying ? '❚❚ Pausar música' : '▶ Reproducir música';
+          }
+        });
+      }
+
+      function setupMusicButton(buttonId) {
+        const button = document.getElementById(buttonId);
+        if (!button) return;
+
+        button.addEventListener('click', async () => {
+          try {
+            if (invitationAudio.paused) {
+              await invitationAudio.play();
+              updateMusicButtons(true);
+            } else {
+              invitationAudio.pause();
+              updateMusicButtons(false);
+            }
+          } catch (error) {
+            console.error(error);
+            alert('No se pudo reproducir la música. Verifica que el archivo musica.mp3 esté en la misma carpeta del HTML.');
+          }
+        });
+      }
+
+      function openWhatsapp(nameInput, countInput, messageBox) {
+        const guestName = nameInput.value.trim();
+        const guestCount = Math.max(1, Number(countInput.value) || 1);
+
+        const message = `Hola, con mucho gusto confirmo mi asistencia a la celebración de los XV años de Julieth.%0A%0ANombre: ${encodeURIComponent(guestName || 'Sin nombre')}%0AInvitados: ${guestCount}%0A%0ASerá un placer acompañarlos en una fecha tan especial.`;
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+
+        messageBox.textContent = 'Se abrirá WhatsApp con tu mensaje listo para enviar.';
+        window.open(url, '_blank');
+      }
+
+      const mobileForm = document.getElementById('rsvp-form');
+      const mobileName = document.getElementById('guest-name');
+      const mobileCount = document.getElementById('guest-count');
+      const mobileMessage = document.getElementById('rsvp-message');
+
+      if (mobileForm) {
+        mobileForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          openWhatsapp(mobileName, mobileCount, mobileMessage);
+        });
+      }
+
+      const desktopForm = document.getElementById('desktop-rsvp-form');
+      const desktopName = document.getElementById('desktop-guest-name');
+      const desktopCount = document.getElementById('desktop-guest-count');
+      const desktopMessage = document.getElementById('desktop-rsvp-message');
+
+      if (desktopForm) {
+        desktopForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          openWhatsapp(desktopName, desktopCount, desktopMessage);
+        });
+      }
+
+      setupMusicButton('music-toggle');
+      setupMusicButton('desktop-music-toggle');
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
