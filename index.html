@@ -6,10 +6,7 @@
     <title>Invitación XV de Julieth</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>
       * { box-sizing: border-box; }
 
@@ -438,13 +435,39 @@
       .highlight-band,
       .desktop-band {
         margin-top: 18px;
-        background: linear-gradient(180deg, #e6efe4, #d5e3d3);
-        padding: 16px;
-        border-radius: 16px;
+        background: linear-gradient(180deg, #eef5eb, #d8e7d4);
+        padding: 18px 20px;
+        border-radius: 18px;
         text-align: center;
-        color: #7e987c;
-        letter-spacing: .04em;
-        line-height: 1.7;
+        color: #5f765a;
+        line-height: 1.8;
+        border: 1px solid rgba(126, 152, 124, 0.28);
+        box-shadow: 0 8px 18px rgba(126, 152, 124, 0.10);
+      }
+
+      .family-label {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.05rem;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        color: #8a6d77;
+        margin-bottom: 4px;
+      }
+
+      .family-names {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        color: #4f624c;
+        font-weight: 600;
+      }
+
+      .family-divider {
+        width: 64px;
+        height: 1px;
+        margin: 12px auto;
+        background: linear-gradient(90deg, transparent, rgba(126, 152, 124, 0.55), transparent);
       }
 
       .rsvp-wrap { padding-top: 28px; }
@@ -806,7 +829,7 @@
                 <div class="desktop-event-card">
                   <div class="desktop-event-icon">⌖</div>
                   <div class="desktop-event-title">Recepción</div>
-                  <div class="desktop-event-place">Jardín de eventos JAAVZ</div>
+                  <div class="desktop-event-place">JAzz Jardín de eventos JAAVZ</div>
                   <div class="desktop-event-time">8:00 PM</div>
                   <div class="desktop-btn-row">
                     <a class="desktop-map-btn" href="https://maps.app.goo.gl/UDD7xsd6f9i31VNo9" target="_blank" rel="noreferrer">Abrir ubicación</a>
@@ -822,6 +845,15 @@
                 <div><strong id="desktop-hours">00</strong><span>HORAS</span></div>
                 <div><strong id="desktop-minutes">00</strong><span>MINUTOS</span></div>
                 <div><strong id="desktop-seconds">00</strong><span>SEGUNDOS</span></div>
+              </div>
+
+            </div>
+            <div class="desktop-band">
+                <span class="family-label">Mis padres</span>
+                <span class="family-names">Noe Abrajan Sanches y Rocio Zarco Abarca</span>
+                <div class="family-divider"></div>
+                <span class="family-label">Mis padrinos</span>
+                <span class="family-names">Francisco Aguilar Valverde y Diana Zarco Ramírez</span>
               </div>
             </div>
 
@@ -844,8 +876,7 @@
                 <h2 class="desktop-heading">Dress code</h2>
                 <div class="desktop-note">Formal</div>
               </div>
-              <div class="desktop-band">Mis padres: Noe Abrajan Sánchez y Rocio Zarco Abarca<br />Mis padrinos: Francisco Aguilar Valverde y Diana Zarco Ramírez</div>
-            </div>
+              
 
             <div class="desktop-panel">
               <h2 class="desktop-heading">Confirma asistencia</h2>
@@ -879,6 +910,7 @@
 
             <div class="music-wrap">
               <button id="music-toggle" class="music-btn" type="button">▶ Reproducir música</button>
+              <div class="music-note">Agrega tu canción en el archivo <strong>musica.mp3</strong></div>
             </div>
 
             <p class="intro-text">
@@ -900,6 +932,15 @@
                 <div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
               </div>
             </section>
+            
+            <div class="highlight-band">
+                <span class="family-label">Mis padres</span>
+                <span class="family-names">Noe Abrajan Sánchez y Rocio Zarco Abarca</span>
+                <div class="family-divider"></div>
+                <span class="family-label">Mis padrinos</span>
+                <span class="family-names">Francisco Aguilar Valverde y Diana Zarco Ramírez</span>
+              </div>
+            </section>
 
             <section class="card-section">
               <div class="line-icon">⛪</div>
@@ -918,6 +959,8 @@
             </section>
 
             <div class="photo-strip"></div>
+
+            
 
             <section class="card-section">
               <h2 class="script-heading section-name">Itinerario</h2>
@@ -944,8 +987,7 @@
                 Si deseas regalarme un detalle o un sobre, será bien recibido. Muchas gracias.
               </div>
 
-              <div class="highlight-band">Mis padres: Noe Abrajan Sanches y Rocio Zarco Abarca<br />Mis padrinos: Francisco Aguilar Valverde y Diana Zarco Ramírez</div>
-            </section>
+              
 
             <section class="card-section rsvp-wrap">
               <h2 class="script-heading section-name">Confirma asistencia</h2>
@@ -966,12 +1008,11 @@
         </section>
       </div>
 
-      <div class="brand"> Abel Salazar</div>
+      <div class="brand">♥ Abel Salazar</div>
     </main>
 
     <script>
       const WHATSAPP_NUMBER = '527531591862';
-
       const eventDateMexico = {
         year: 2026,
         month: 4,
@@ -980,7 +1021,6 @@
         minute: 0,
         second: 0
       };
-
       const invitationAudio = new Audio('musica.mp3');
       invitationAudio.loop = true;
       invitationAudio.preload = 'auto';
@@ -998,8 +1038,7 @@
         });
 
         const parts = Object.fromEntries(
-          formatter
-            .formatToParts(new Date())
+          formatter.formatToParts(new Date())
             .filter(part => part.type !== 'literal')
             .map(part => [part.type, part.value])
         );
